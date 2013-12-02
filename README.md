@@ -13,21 +13,26 @@ Simple enough :)
 Installation
 ------------
 
-*Pathogen*:
+- [Vundle](https://github.com/gmarik/vundle) way (recommended), add the following to your $HOME/.vimrc file:
 
-    $ git clone https://github.com/chilicuil/nextCS.git ~/.vim/bundle/nextCS
+        Bundle 'chilicuil/nextCS'
 
-*Vundle*, add the following to your $HOME/.vimrc file:
+    And run inside of vim:
 
-    Bundle 'chilicuil/nextCS'
+        :BundleInstall
 
-And run inside of vim:
+- [Pathogen](https://github.com/tpope/vim-pathogen) way:
 
-    :BundleInstall
+        $ git clone https://github.com/chilicuil/nextCS.git ~/.vim/bundle/nextCS
 
-*Manual*, download the vim file from http://www.vim.org/scripts/script.php?script_id=2713 and copy it to $HOME/.vim/plugins/
+- **Manual** (simplest if you've never heard of vundle or pathogen), download the zip file generated from github and extract it to $HOME/.vim
 
-    mv nextCS.vim $HOME/.vim/plugins
+        mv nextCS*.zip $HOME/.vim
+        cd $HOME/.vim && unzip nextCS*.zip
+
+    Update the help tags from vim:
+
+        :helpt ~/.vim/doc/
 
 If you find yourself uncomfortable with the default mapping, change it by adding to your vimrc file:
 
