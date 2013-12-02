@@ -1,5 +1,3 @@
-Change your vim color scheme easily
-
 nextCS
 ------
 
