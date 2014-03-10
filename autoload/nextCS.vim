@@ -24,15 +24,11 @@ function! nextCS#GetCS() "getColorSheme
     "this search in the color directories for *.vim files and add them to
     "colorSchemesDetected
     "let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim", "\n")), 'fnamemodify(v:val, ":t:r")')
-    if !isdirectory(g:nextcs_dir)
-        echo 'nextCS: your specified theme directory ($vimdir/' . g:nextcs_dir . ') does not exist!'
-        return 1
-    endif
 
     let g:colorSchemesDetected = map(split(globpath(&runtimepath, g:nextcs_dir . "*.vim")), 'fnamemodify(v:val, ":t:r")')
 
     if empty(g:colorSchemesDetected)
-        echo 'nextCS: you do not have any color file at $vimdir/' . g:nextcs_dir
+        echo 'nextCS: you do not have any color file at $runtimepath/' . g:nextcs_dir
         return 1
     endif
     "echo g:colorSchemesDetected

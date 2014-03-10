@@ -37,8 +37,9 @@ These options should be set in your .vimrc file.
 
 g:nextcs_dir                                         *nextCSConfig-nextcs-dir*
     Use this option to configure the theme folder from where nextCS should
-    fetch the Color Scheme. >
-        let g:nextcs_dir = 'colors'
+    fetch Color Schemes (it will look at every directory present in the
+    $runtimepath/ var). >
+        let g:nextcs_dir = 'colors/'
 <
 
 g:nextcs_map                                         *nextCSConfig-nextcs-map*
