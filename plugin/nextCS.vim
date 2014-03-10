@@ -1,8 +1,11 @@
-"nextCS.vim: change your CS (color scheme)
-"Press key:
-"   F12         next scheme
-"   F11         previous scheme
+" ============================================================================
+" File:        nextCS.vim
+" Description: vim color theme selector
+" Maintainer:  Javier Lopez <m@javier.io>
+" License:     WTFPL -- look it up.
+" ============================================================================
 
+" Init {{{1
 if exists("loaded_nextCS") || exists('loaded_setcolors')
     finish
 endif
@@ -12,80 +15,24 @@ let loaded_nextCS = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! l:avoidECN()
-    if exists('g:colors_name')
-        let result = index(g:colorSchemesDetected, g:colors_name)
-        if result == -1
-            let g:colorSchemesDetected = remove(g:colorSchemesDetected, i)
-        endif
-    else
-        if exists('g:current')
-            let g:current += 1
-        else
-            let g:current = -1
-        endif
-    endif
-endfunction
+" Default configuration {{{1
+if !exists('g:nextcs_dir')
+  let g:nextcs_dir= 'colors/'
+endif
 
-function! l:getCS() "getColorSheme
-    "this search in the color directories for *.vim files and add them to
-    "colorSchemesDetected
-    "let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim", "\n")), 'fnamemodify(v:val, ":t:r")')
-    let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim")), 'fnamemodify(v:val, ":t:r")')
+if !exists('g:nextcs_map')
+  let g:nextcs_map= '<F12>'
+endif
 
-    if empty(g:colorSchemesDetected)
-        echo 'You do not have any color file'
-        finish
-    endif
-    "echo g:colorSchemesDetected
-    "sometimes g:colors_name and file names don't match
-    call l:avoidECN() "avoidEvilColorNames
+if !exists('g:previouscs_map')
+  let g:previouscs_map= '<F11>'
+endif
 
-    let g:current = index(g:colorSchemesDetected, g:colors_name)
-    let g:CSloaded = 1
-endfunction
+" Commands & Mappings {{{1
+command! NextCS     call nextCS#Next()
+command! PreviousCS call nextCS#Previous()
 
-function! NextCS()
-    if (!exists('g:CSloaded'))
-        call l:getCS()
-    endif
-
-    let g:current += 1
-
-    if !(0 <= g:current && g:current < len(g:colorSchemesDetected))
-       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)  
-    endif
-    try
-        execute 'colorscheme' . " " . g:colorSchemesDetected[g:current]
-    catch /E185:/
-        call l:avoidECN()
-    endtry
-    highlight clear SignColumn
-    redraw!
-    echo g:colorSchemesDetected[g:current]
-endfunction
-
-function! PreviousCS()
-    if (!exists('g:CSloaded'))
-        call l:getCS()
-    endif
-
-    let g:current -= 1
-
-    if !(0 <= g:current && g:current < len(g:colorSchemesDetected))
-       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)  
-    endif
-    try
-        execute 'colorscheme' . " " . g:colorSchemesDetected[g:current]
-    catch /E185:/
-        call l:avoidECN()
-    endtry
-    highlight clear SignColumn
-    redraw!
-    echo g:colorSchemesDetected[g:current]
-endfunction
-
-nnoremap <F12> :call NextCS() <CR>
-nnoremap <F11> :call PreviousCS() <CR>
+exe "nnoremap <silent>" g:nextcs_map     ":NextCS<CR>"
+exe "nnoremap <silent>" g:previouscs_map ":PreviousCS<CR>"
 
 let &cpo = s:save_cpo

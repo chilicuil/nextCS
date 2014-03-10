@@ -1,7 +1,7 @@
 nextCS
 ------
 
-nextCS (next Color Scheme) changes your theme in one shot. It's based on some other scripts I found who didn't work with some silly color schemes. This one will load *every* theme you got. If it's incorrect, you'll see the error, but you'll able to just press "next" (F12) and you'll see the next.
+nextCS (next Color Scheme) changes your theme in one shot. It's based on some other scripts I found who didn't work with some silly color schemes. This one will load *every* theme you have. If it's incorrect, you'll see the error, but you'll able to just press "next" (F12) and see the next.
 
 - F12 Next
 - F11 Previous
@@ -34,14 +34,12 @@ Installation
 
 If you find yourself uncomfortable with the default mapping, change it by adding to your vimrc file:
 
-    nnoremap <F12> :call NextCS()<CR>
-    nnoremap <F11> :call PreviousCS()<CR>
+    let g:nextcs_map = '<F12>'
+    let g:nextcs_map = '<F11>'
 
 License
 -------
 
-© 2013 WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
-
+© 2014 WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/chilicuil/nextcs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
