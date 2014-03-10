@@ -43,14 +43,14 @@ g:nextcs_dir                                         *nextCSConfig-nextcs-dir*
 <
 
 g:nextcs_map                                         *nextCSConfig-nextcs-map*
-    Use this option to configure the mapping you can want to use to preview
-    the next Color Scheme. >
+    Use this option to configure the mapping you want to use to preview the
+    next Color Scheme. >
         let g:nextcs_map = '<F12>'
 <
 
 g:previouscs_map                                 *nextCSConfig-previouscs-map*
-    Use this option to configure the mapping you can want to use to preview
-    the previous Color Scheme. >
+    Use this option to configure the mapping you want to use to preview the
+    previous Color Scheme. >
         let g:nextcs_map = '<F11>'
 <
 
@@ -73,7 +73,7 @@ CONTRIBUTING                                              *nextCSContributing*
 
 
 nextCS has worked for me for a few years now as it is. if you need something
-else the best way to get it is to send a patch, fork it and send your pull
+else the best way to get it is to send a patch. Fork and send your pull
 request =)
 
 GitHub: http://github.com/chilicuil/nextCS
@@ -93,7 +93,7 @@ v0.0.1
 CREDITS                                                        *nextCSCredits*
 
 I don't remember the original snippets from where this plugin was inspired, if
-someone know about it, I'll be glad to know.
+someone know about them, I'll be glad to know.
 
 ==============================================================================
 " vim: ft=help
