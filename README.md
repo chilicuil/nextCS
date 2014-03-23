@@ -6,6 +6,10 @@ nextCS (next Color Scheme) changes your theme in one shot. It's based on some ot
 - F12 Next
 - F11 Previous
 
+<p align="center">
+<img src="http://javier.io/assets/img/nextCS.gif" alt="nextCS"/>
+</p>
+
 Simple enough :)
 
 Installation
