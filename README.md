@@ -41,6 +41,11 @@ If you find yourself uncomfortable with the default mapping, change it by adding
     let g:nextcs_map = '<F12>'
     let g:nextcs_map = '<F11>'
 
+Or by modifing directly the <Plug> actions
+
+    map <F12> <Plug>NextCS
+    map <F11> <Plug>PreviousCS
+
 License
 -------
 
