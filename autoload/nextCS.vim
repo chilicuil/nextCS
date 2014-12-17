@@ -21,10 +21,8 @@ function! nextCS#AvoidECN()
 endfunction
 
 function! nextCS#GetCS() "getColorSheme
-    "this search in the color directories for *.vim files and add them to
-    "colorSchemesDetected
+    "this search in the color directories for *.vim files and add them to colorSchemesDetected
     "let g:colorSchemesDetected = map(split(globpath(&runtimepath, "colors/*.vim", "\n")), 'fnamemodify(v:val, ":t:r")')
-
     let g:colorSchemesDetected = map(split(globpath(&runtimepath, g:nextcs_dir . "*.vim")), 'fnamemodify(v:val, ":t:r")')
 
     if empty(g:colorSchemesDetected)
@@ -41,15 +39,13 @@ endfunction
 
 function! nextCS#Next()
     if (!exists('g:CSloaded'))
-        if nextCS#GetCS()
-            return 1
-        endi
+        if nextCS#GetCS() | return 1 | endif
     endif
 
     let g:current += 1
 
     if !(0 <= g:current && g:current < len(g:colorSchemesDetected))
-       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)  
+       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)
     endif
     try
         execute 'colorscheme' . " " . g:colorSchemesDetected[g:current]
@@ -63,15 +59,13 @@ endfunction
 
 function! nextCS#Previous()
     if (!exists('g:CSloaded'))
-        if nextCS#GetCS()
-            return 1
-        endif
+        if nextCS#GetCS() | return 1 | endif
     endif
 
     let g:current -= 1
 
     if !(0 <= g:current && g:current < len(g:colorSchemesDetected))
-       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)  
+       let g:current = (g:current == len(g:colorSchemesDetected) ? 0 : len(g:colorSchemesDetected)-1)
     endif
     try
         execute 'colorscheme' . " " . g:colorSchemesDetected[g:current]

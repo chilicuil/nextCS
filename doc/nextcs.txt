@@ -47,6 +47,9 @@ g:nextcs_map                                         *nextCSConfig-nextcs-map*
     next Color Scheme. >
         let g:nextcs_map = '<F12>'
 <
+    Additionally the mapping can be assigned directly to <Plug>NextCS >
+        map <F12> <Plug>NextCS
+<
 
 g:previouscs_map                                 *nextCSConfig-previouscs-map*
     Use this option to configure the mapping you want to use to preview the
@@ -54,7 +57,9 @@ g:previouscs_map                                 *nextCSConfig-previouscs-map*
         let g:nextcs_map = '<F11>'
 <
 
-    NOTE: The mappings are enabled in normal mode.
+    Additionally the mapping can be assigned directly to <Plug>PreviousCS >
+        map <F12> <Plug>PreviousCS
+<
 
 ==============================================================================
 LICENSE                                                        *nextCSLicense*
@@ -81,6 +86,8 @@ GitHub: http://github.com/chilicuil/nextCS
 ==============================================================================
 CHANGELOG                                                    *nextCSChangelog*
 
+v0.0.4
+    * add <Plug>NextCS and <Plug>PreviousCS to allow extra mapping
 v0.0.3
     * refactored, add documentation, add configuration options (mapping, theme
       dir)
