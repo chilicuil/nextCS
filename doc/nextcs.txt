@@ -6,11 +6,10 @@ CONTENTS                                                     *nextCS-contents*
     1. Intro ........................... |nextCSIntro|
     2. Usage ........................... |nextCSUsage|
     3. Configuration ................... |nextCSConfig|
-    4. License ......................... |nextCSLicense|
-    5. Bugs ............................ |nextCSBugs|
-    6. Contributing .................... |nextCSContributing|
-    7. Changelog ....................... |nextCSChangelog|
-    8. Credits ......................... |nextCSCredits|
+    4. Bugs ............................ |nextCSBugs|
+    5. Contributing .................... |nextCSContributing|
+    6. Changelog ....................... |nextCSChangelog|
+    7. Credits ......................... |nextCSCredits|
 
 ==============================================================================
 INTRO                                                            *nextCSIntro*
@@ -60,11 +59,6 @@ g:previouscs_map                                 *nextCSConfig-previouscs-map*
     Additionally the mapping can be assigned directly to <Plug>PreviousCS >
         map <F12> <Plug>PreviousCS
 <
-
-==============================================================================
-LICENSE                                                        *nextCSLicense*
-
-WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
 
 ==============================================================================
 BUGS                                                              *nextCSBugs*

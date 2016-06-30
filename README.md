@@ -45,8 +45,3 @@ Or by modifing directly the <Plug> actions
 
     map <F12> <Plug>NextCS
     map <F11> <Plug>PreviousCS
-
-License
--------
-
-© 2014 WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/

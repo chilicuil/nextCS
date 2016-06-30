@@ -2,7 +2,6 @@
 " File:        nextCS.vim
 " Description: vim color theme selector
 " Maintainer:  Javier Lopez <m@javier.io>
-" License:     WTFPL -- look it up.
 " ============================================================================
 
 function! nextCS#AvoidECN()
