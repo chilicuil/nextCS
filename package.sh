@@ -1,3 +1,3 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-zip -r nextCS.zip autoload/ doc/ plugin/ README.md
+zip -r nextCS.vim.zip autoload/ doc/ plugin/ README.md

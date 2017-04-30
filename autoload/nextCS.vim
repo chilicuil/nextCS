@@ -25,7 +25,7 @@ function! nextCS#GetCS() "getColorSheme
     let g:colorSchemesDetected = map(split(globpath(&runtimepath, g:nextcs_dir . "*.vim")), 'fnamemodify(v:val, ":t:r")')
 
     if empty(g:colorSchemesDetected)
-        echo 'nextCS: you do not have any color file at $runtimepath/' . g:nextcs_dir
+        echo 'nextCS.vim: you do not have any color file at $runtimepath/' . g:nextcs_dir
         return 1
     endif
     "echo g:colorSchemesDetected

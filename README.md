@@ -1,7 +1,7 @@
-nextCS
+nextCS.vim
 ------
 
-nextCS (next Color Scheme) changes your theme in one shot. It's based on some other scripts I found who didn't work with some silly color schemes. This one will load *every* theme you have. If it's incorrect, you'll see the error, but you'll able to just press "next" (F12) and see the next.
+[nextCS.vim](https://github.com/chilicuil/nextCS.vim) let you change your vim theme in one shot.
 
 - F12 Next
 - F11 Previous
@@ -15,9 +15,9 @@ Simple enough :)
 Installation
 ------------
 
-- [Vundle](https://github.com/gmarik/vundle) way (recommended), add the following to your $HOME/.vimrc file:
+- [Vundle](https://github.com/gmarik/vundle) way (recommended), add the following to your `$HOME/.vimrc` file:
 
-        Bundle 'chilicuil/nextCS'
+        Bundle 'chilicuil/nextCS.vim'
 
     And run inside of vim:
 
@@ -25,12 +25,12 @@ Installation
 
 - [Pathogen](https://github.com/tpope/vim-pathogen) way:
 
-        $ git clone https://github.com/chilicuil/nextCS.git ~/.vim/bundle/nextCS
+        $ git clone https://github.com/chilicuil/nextCS.vim.git ~/.vim/bundle/nextCS.vim
 
 - **Manual** (simplest if you've never heard of vundle or pathogen), download the zip file generated from github and extract it to $HOME/.vim
 
-        mv nextCS*.zip $HOME/.vim
-        cd $HOME/.vim && unzip nextCS*.zip
+        mv nextCS.vim*.zip $HOME/.vim
+        cd $HOME/.vim && unzip nextCS.vim*.zip
 
     Update the help tags from vim:
 
