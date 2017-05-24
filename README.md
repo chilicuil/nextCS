@@ -1,7 +1,7 @@
 nextCS.vim
 ------
 
-[nextCS.vim](https://github.com/chilicuil/nextCS.vim) let you change your vim theme in one shot.
+[nextCS.vim](https://github.com/javier-lopez/nextCS.vim) let you change your vim theme in one shot.
 
 - F12 Next
 - F11 Previous
@@ -17,7 +17,7 @@ Installation
 
 - [Vundle](https://github.com/gmarik/vundle) way (recommended), add the following to your `$HOME/.vimrc` file:
 
-        Bundle 'chilicuil/nextCS.vim'
+        Bundle 'javier-lopez/nextCS.vim'
 
     And run inside of vim:
 
@@ -25,7 +25,7 @@ Installation
 
 - [Pathogen](https://github.com/tpope/vim-pathogen) way:
 
-        $ git clone https://github.com/chilicuil/nextCS.vim.git ~/.vim/bundle/nextCS.vim
+        $ git clone https://github.com/javier-lopez/nextCS.vim.git ~/.vim/bundle/nextCS.vim
 
 - **Manual** (simplest if you've never heard of vundle or pathogen), download the zip file generated from github and extract it to $HOME/.vim
 
